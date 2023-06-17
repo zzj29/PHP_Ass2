@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Zhijun Zhang 12.06.2023 ICTPRG302 Project Assessment (Ass#2)">
     <title>Gelos Enterprises</title>
     <link href="style.css" rel="stylesheet">
 </head>
@@ -28,23 +29,45 @@
         <img src="images/GE-stacked-logo-reverse.png" alt="" width="200" height="106">
     </section>
     <main>
-        <h1>Admin</h1>
+        
         <?php
 
+        $username = trim($_POST["username"]);
+        $password = $_POST["password"];
+        $loginOK = False;
 
-        //match username with the password saved in accounts.txt
+        // Read the accounts.txt file
+        $fileArray = file("accounts.txt", FILE_IGNORE_NEW_LINES); //remove the newline character \n from each line
 
+        // Loop through each line and check for a matching username and password
+        foreach($fileArray as $line)
+        {
+            list($storedUsername, $storedPassword) = explode(' ', $line);
+            if ($username === $storedUsername && $password === $storedPassword) 
+            {
+                $loginOK = True;
+                break;
+            }
+        }
 
+        //successfully logged in, the user should be able to view the accounts
+        if ($loginOK)
+        {
+            echo "<h1>Admin</h1>";
+            foreach($fileArray as $line)
+            {
+                echo "<p>$line</p>";
+            }
+        }
 
-
-
-
-
-        //successfully lodged in, the user should be able to view the accounts
-
-
-        //otherwise, change the H1 (no longer Admin), informing the username & password is incorrect
-
+        //otherwise, informing the username or password is incorrect
+        else
+        {
+            echo "<h1>Invalid</h1> <p>Invalid username or password. Please try again.</p>";
+            ?>
+                <a href="login.php">Return to Login Form</a>
+            <?php
+        }
 
         ?>
     </main>
