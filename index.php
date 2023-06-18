@@ -10,7 +10,7 @@
 </head>
 <body>
     <header>
-        <div id="headerContent">
+        <div id="headerContent"> 
             <nav>
                 <ul>
                     <li class="menu">
@@ -29,20 +29,17 @@
         <img src="images/GE-stacked-logo-reverse.png" alt="" width="200" height="106">
     </section>
     <main>
-        <h1>Login</h1>
-        <form action="admin.php" method="post">
-            <div>
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username">
-            </div>
-            <div>
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password">
-            </div>
-            <div>
-                <button type="submit" name="login">LOGIN</button>
-            </div>
-        </form>
+        <h1>Welcome</h1>
+        <p>From its origins in Australia, Gelos Enterprises has grown into one of the world's leading business operations. We are one of Australia's largest listed companies, with our headquarters based in the Tulitza CBD. Our primary objective is to achieve excellence through continuous innovation.</p>
+		<p>We aim to achieve this by:</p>
+		<ul>
+			<li>increasing the success of organisations with existing products and technologies</li>
+			<li>crafting a detailed proposition, we can propel a new business model and create a lasting competitive advantage</li>
+			<li>increasing our primary revenue streams through property ownership and investment</li>
+			<li>being a trusted global investing partner that offers core incentives, business start-up and premium consulting services</li>
+			<li>acting with integrity and honesty in all of our dealings.</li>
+		</ul>
+		<p>We are a global business front runner. We have high standards and pay attention to all levels of detail, providing us with successes over the years in our quest to meet the lofty expectations of businesses.</p>
     </main>
     <footer>
         <p>Contact us</p>
