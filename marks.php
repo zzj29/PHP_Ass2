@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Zhijun Zhang 12.06.2023 ICTPRG302 Project Assessment (Ass#2)">
     <title>Marks</title>
     <link href="style.css" rel="stylesheet">
 </head>
